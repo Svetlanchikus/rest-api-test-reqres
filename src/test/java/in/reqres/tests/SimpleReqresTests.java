@@ -1,4 +1,4 @@
-package in.reqres;
+package in.reqres.tests;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,7 @@ import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.hasKey;
 import static org.hamcrest.Matchers.is;
 
-public class ReqresTests {
+public class SimpleReqresTests {
 
     @DisplayName("Checking the existence of the user number 10")
     @Test
