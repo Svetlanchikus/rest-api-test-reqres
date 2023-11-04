@@ -10,9 +10,7 @@ import in.reqres.models.updatePatch.UpdatePatchResponseBodyModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static in.reqres.specs.CreateSpec.*;
-import static in.reqres.specs.RegisterSpec.*;
-import static in.reqres.specs.UpdatePatchSpec.*;
+import static in.reqres.specs.Specs.*;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,12 +25,12 @@ public class LombokSpecTests {
 
 
         CreateResponseBodyModel response = step("Creating a user", () ->
-                given(createRequestSpec)
+                given(requestSpec)
                         .body(authData)
                         .when()
                         .post("/users")
                         .then()
-                        .spec(createResponseSpec)
+                        .spec(responseSpecCode201)
                         .extract().as(CreateResponseBodyModel.class));
 
         step("Checking the Response", () -> {
@@ -50,12 +48,12 @@ public class LombokSpecTests {
 
 
         UpdatePatchResponseBodyModel response = step("Checking user changes", () ->
-                given(UpdatePatchRequestSpec)
+                given(requestSpec)
                         .body(authData)
                         .when()
                         .patch("/users/10")
                         .then()
-                        .spec(UpdatePatchResponseSpec)
+                        .spec(responseSpecCode200)
                         .extract().as(UpdatePatchResponseBodyModel.class));
 
         step("Checking the Response", () -> {
@@ -73,12 +71,12 @@ public class LombokSpecTests {
 
 
         RegisterResponseBodyModel response = step("User registration", () ->
-                given(registerRequestSpec)
+                given(requestSpec)
                         .body(authData)
                         .when()
                         .post("/register")
                         .then()
-                        .spec(registerResponseSpec)
+                        .spec(responseSpecCode200)
                         .extract().as(RegisterResponseBodyModel.class));
 
         step("Checking the Response", () -> {
@@ -94,12 +92,12 @@ public class LombokSpecTests {
         authData.setEmail("eve.holt@reqres.in");
 
         ErrorRegisterResponseBodyModel response = step("User registration", () ->
-                given(registerRequestSpec)
+                given(requestSpec)
                         .body(authData)
                         .when()
                         .post("/register")
                         .then()
-                        .spec(errorRegisterResponseSpec)
+                        .spec(errorResponseSpecCode400)
                         .extract().as(ErrorRegisterResponseBodyModel.class));
 
         step("Checking the Response", () -> {

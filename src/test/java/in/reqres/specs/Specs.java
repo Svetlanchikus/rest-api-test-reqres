@@ -9,8 +9,8 @@ import static in.reqres.helpers.CustomAllureListener.withCustomTemplates;
 import static io.restassured.RestAssured.with;
 import static io.restassured.http.ContentType.JSON;
 
-public class CreateSpec {
-    public static RequestSpecification createRequestSpec = with()
+public class Specs {
+    public static RequestSpecification requestSpec = with()
             .filter(withCustomTemplates())
             .log().uri()
             .log().method()
@@ -19,9 +19,21 @@ public class CreateSpec {
             .baseUri("https://reqres.in")
             .basePath("/api");
 
-    public static ResponseSpecification createResponseSpec = new ResponseSpecBuilder()
+    public static ResponseSpecification responseSpecCode201 = new ResponseSpecBuilder()
             .log(LogDetail.STATUS)
             .log(LogDetail.BODY)
             .expectStatusCode(201)
+            .build();
+
+    public static ResponseSpecification responseSpecCode200 = new ResponseSpecBuilder()
+            .log(LogDetail.STATUS)
+            .log(LogDetail.BODY)
+            .expectStatusCode(200)
+            .build();
+
+    public static ResponseSpecification errorResponseSpecCode400 = new ResponseSpecBuilder()
+            .log(LogDetail.STATUS)
+            .log(LogDetail.BODY)
+            .expectStatusCode(400)
             .build();
 }
