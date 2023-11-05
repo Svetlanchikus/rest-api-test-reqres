@@ -7,9 +7,9 @@ import org.aeonbits.owner.Config;
 public interface ApiConfig extends Config {
     @Key("baseUrl")
     @DefaultValue("https://reqres.in")
-    public String getBaseUrl();
+    String getBaseUrl();
 
     @Key("basePath")
     @DefaultValue("/api")
-    public String getBasePath();
+    String getBasePath();
 }

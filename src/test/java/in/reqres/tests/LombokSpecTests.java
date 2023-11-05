@@ -1,12 +1,12 @@
 package in.reqres.tests;
 
-import in.reqres.models.createPost.CreateRequestBodyModel;
-import in.reqres.models.createPost.CreateResponseBodyModel;
+import in.reqres.models.createpost.CreateRequestBodyModel;
+import in.reqres.models.createpost.CreateResponseBodyModel;
 import in.reqres.models.register.ErrorRegisterResponseBodyModel;
 import in.reqres.models.register.RegisterRequestBodyModel;
 import in.reqres.models.register.RegisterResponseBodyModel;
-import in.reqres.models.updatePatch.UpdatePatchRequestBodyModel;
-import in.reqres.models.updatePatch.UpdatePatchResponseBodyModel;
+import in.reqres.models.updatepatch.UpdatePatchRequestBodyModel;
+import in.reqres.models.updatepatch.UpdatePatchResponseBodyModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

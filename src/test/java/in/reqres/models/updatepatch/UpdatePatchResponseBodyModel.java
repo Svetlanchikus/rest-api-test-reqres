@@ -1,4 +1,4 @@
-package in.reqres.models.updatePatch;
+package in.reqres.models.updatepatch;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

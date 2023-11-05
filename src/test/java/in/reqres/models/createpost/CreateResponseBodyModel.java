@@ -1,4 +1,4 @@
-package in.reqres.models.createPost;
+package in.reqres.models.createpost;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
