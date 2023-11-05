@@ -1,4 +1,4 @@
-package in.reqres.models.updatePatch;
+package in.reqres.models.updatepatch;
 
 import lombok.Data;
 

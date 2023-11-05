@@ -1,4 +1,4 @@
-package in.reqres.models.createPost;
+package in.reqres.models.createpost;
 
 import lombok.Data;
 
