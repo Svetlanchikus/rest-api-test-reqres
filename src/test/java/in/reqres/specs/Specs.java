@@ -9,8 +9,6 @@ import static in.reqres.helpers.CustomAllureListener.withCustomTemplates;
 import static io.restassured.RestAssured.with;
 import static io.restassured.http.ContentType.JSON;
 
-
-
 public class Specs extends TestBase {
     public static RequestSpecification requestSpec = with()
             .filter(withCustomTemplates())

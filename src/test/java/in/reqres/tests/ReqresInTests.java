@@ -14,10 +14,10 @@ import org.junit.jupiter.api.Test;
 import static in.reqres.specs.Specs.*;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LombokSpecTests {
+@DisplayName("Testing the site API https://reqres.in/")
+public class ReqresInTests extends TestBase {
     @DisplayName("Create a new user")
     @Test
     void createNewUserTest() {
@@ -25,15 +25,15 @@ public class LombokSpecTests {
         authData.setName("Tracey");
         authData.setJob("leader");
 
-
-        CreateResponseBodyModel response = step("Creating a user", () ->
+        CreateResponseBodyModel response = step("Execute a request to create a user", () ->
                 given(requestSpec)
                         .body(authData)
                         .when()
                         .post("/users")
                         .then()
                         .spec(responseSpecCode201)
-                        .extract().as(CreateResponseBodyModel.class));
+                        .extract()
+                        .as(CreateResponseBodyModel.class));
 
         step("Checking the Response", () -> {
             assertEquals("Tracey", response.getName());
@@ -48,15 +48,15 @@ public class LombokSpecTests {
         authData.setName("Janet");
         authData.setEmail("charles.morris@reqres.in");
 
-
-        UpdatePatchResponseBodyModel response = step("Checking user changes", () ->
+        UpdatePatchResponseBodyModel response = step("Make a request to update the user", () ->
                 given(requestSpec)
                         .body(authData)
                         .when()
                         .patch("/users/10")
                         .then()
                         .spec(responseSpecCode200)
-                        .extract().as(UpdatePatchResponseBodyModel.class));
+                        .extract()
+                        .as(UpdatePatchResponseBodyModel.class));
 
         step("Checking the Response", () -> {
             assertEquals("Janet", response.getName());
@@ -71,14 +71,15 @@ public class LombokSpecTests {
         authData.setEmail("eve.holt@reqres.in");
         authData.setPassword("pistol");
 
-        RegisterResponseBodyModel response = step("User registration", () ->
+        RegisterResponseBodyModel response = step("Execute a user registration request", () ->
                 given(requestSpec)
                         .body(authData)
                         .when()
                         .post("/register")
                         .then()
                         .spec(responseSpecCode200)
-                        .extract().as(RegisterResponseBodyModel.class));
+                        .extract()
+                        .as(RegisterResponseBodyModel.class));
 
         step("Checking the Response", () -> {
             assertEquals(4, response.getId());
@@ -92,7 +93,7 @@ public class LombokSpecTests {
         RegisterRequestBodyModel authData = new RegisterRequestBodyModel();
         authData.setEmail("eve.holt@reqres.in");
 
-        ErrorRegisterResponseBodyModel response = step("User registration", () ->
+        ErrorRegisterResponseBodyModel response = step("Make a request to register a user without specifying a password", () ->
                 given(requestSpec)
                         .body(authData)
                         .when()
@@ -109,8 +110,8 @@ public class LombokSpecTests {
 
     @DisplayName("Getting a list of users")
     @Test
-    void GettingListUsersTest() {
-        ListUsersResponseBodyModel response = step("Getting a list of users", () ->
+    void gettingListUsersTest() {
+        ListUsersResponseBodyModel response = step("Make a request to get a list of users", () ->
                 given(requestSpec)
                         .queryParams("page", "2")
                         .when()
@@ -124,16 +125,16 @@ public class LombokSpecTests {
             assertEquals(2, response.getPage());
         });
     }
-        @DisplayName("Deleting users")
-        @Test
-        void DeletingUsersTest() {
-            step("Getting a list of users", () ->
-            given(requestSpec)
-                    .when()
-                    .delete("/users/2")
-                    .then()
-                    .spec(responseSpecCode204));
-        };
+    @DisplayName("Deleting user")
+    @Test
+    void deletingUsersTest() {
+        step("Execute a request to delete a user", () ->
+                given(requestSpec)
+                        .when()
+                        .delete("/users/2")
+                        .then()
+                        .spec(responseSpecCode204));
     }
+}
 
 
