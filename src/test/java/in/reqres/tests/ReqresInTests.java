@@ -15,6 +15,7 @@ import static in.reqres.specs.Specs.*;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @DisplayName("Testing the site API https://reqres.in/")
 public class ReqresInTests extends TestBase {
@@ -38,6 +39,8 @@ public class ReqresInTests extends TestBase {
         step("Checking the Response", () -> {
             assertEquals("Tracey", response.getName());
             assertEquals("leader", response.getJob());
+            assertNotNull(response.getId());
+            assertNotNull(response.getCreatedAt());
         });
     }
 
@@ -61,6 +64,7 @@ public class ReqresInTests extends TestBase {
         step("Checking the Response", () -> {
             assertEquals("Janet", response.getName());
             assertEquals("charles.morris@reqres.in", response.getEmail());
+            assertNotNull(response.getUpdatedAt());
         });
     }
 
@@ -123,6 +127,14 @@ public class ReqresInTests extends TestBase {
 
         step("Checking the Response", () -> {
             assertEquals(2, response.getPage());
+            assertEquals(6, response.getPerPage());
+            assertEquals(12, response.getTotal());
+            assertEquals(2, response.getTotalPages());
+            assertEquals(7, response.getData().get(0).getId());
+            assertEquals("michael.lawson@reqres.in", response.getData().get(0).getEmail());
+            assertEquals("Michael", response.getData().get(0).getFirstName());
+            assertEquals("Lawson", response.getData().get(0).getLastName())
+            ;assertEquals("https://reqres.in/img/faces/7-image.jpg", response.getData().get(0).getAvatar());
         });
     }
     @DisplayName("Deleting user")
