@@ -21,17 +21,24 @@ public class Specs extends TestBase {
             .baseUri(config.getBaseUrl())
             .basePath(config.getBasePath());
 
+    public static ResponseSpecification responseSpecCode200 = new ResponseSpecBuilder()
+            .log(LogDetail.STATUS)
+            .log(LogDetail.BODY)
+            .expectStatusCode(200)
+            .build();
+
     public static ResponseSpecification responseSpecCode201 = new ResponseSpecBuilder()
             .log(LogDetail.STATUS)
             .log(LogDetail.BODY)
             .expectStatusCode(201)
             .build();
 
-    public static ResponseSpecification responseSpecCode200 = new ResponseSpecBuilder()
+    public static ResponseSpecification responseSpecCode204 = new ResponseSpecBuilder()
             .log(LogDetail.STATUS)
             .log(LogDetail.BODY)
-            .expectStatusCode(200)
+            .expectStatusCode(204)
             .build();
+
 
     public static ResponseSpecification errorResponseSpecCode400 = new ResponseSpecBuilder()
             .log(LogDetail.STATUS)
