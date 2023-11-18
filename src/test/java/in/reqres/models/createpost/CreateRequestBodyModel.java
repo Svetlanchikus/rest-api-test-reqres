@@ -5,5 +5,6 @@ import lombok.Data;
 @Data
 public class CreateRequestBodyModel {
 
-    String name, job;
+    String name;
+    String job;
 }

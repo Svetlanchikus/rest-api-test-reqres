@@ -134,9 +134,11 @@ public class ReqresInTests extends TestBase {
             assertEquals("michael.lawson@reqres.in", response.getData().get(0).getEmail());
             assertEquals("Michael", response.getData().get(0).getFirstName());
             assertEquals("Lawson", response.getData().get(0).getLastName())
-            ;assertEquals("https://reqres.in/img/faces/7-image.jpg", response.getData().get(0).getAvatar());
+            ;
+            assertEquals("https://reqres.in/img/faces/7-image.jpg", response.getData().get(0).getAvatar());
         });
     }
+
     @DisplayName("Deleting user")
     @Test
     void deletingUsersTest() {

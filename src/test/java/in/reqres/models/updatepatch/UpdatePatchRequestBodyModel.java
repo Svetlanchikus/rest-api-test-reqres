@@ -5,5 +5,6 @@ import lombok.Data;
 @Data
 public class UpdatePatchRequestBodyModel {
 
-    String name, email;
+    String name;
+    String email;
 }
