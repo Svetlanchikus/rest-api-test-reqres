@@ -5,7 +5,7 @@
 + [Технологии и инструменты](#технологии-и-инструменты)
 + [Реализованные проверки](#реализованные-проверки)
 + [Запуск тестов из терминала](#запуск-тестов-из-терминала)
-+ [Запуск тестов в Jenkins](#Запуск-тестов-jenkins)
++ [Запуск тестов в Jenkins](#запуск-тестов-из-jenkins)
 + [Уведомления в Telegram](#Уведомления-telegram)
 + [Отчеты Allure Report](#Отчеты-allure-repor)
 + [Интеграция с Allure TestOps](#Интеграция-allure-testOps)
@@ -48,7 +48,7 @@
 gradle clean test  
 ```
 
-## <a name="Запуск-тестов-jenkins">Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/sveta_qa_guru_REST-API/):</a>
+## <a name="запуск-тестов-из-jenkins">Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/sveta_qa_guru_REST-API/):</a>
 
 Для запуска необходимо нажать "Build with Parameters":
 
