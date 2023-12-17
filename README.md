@@ -6,10 +6,10 @@
 + [Реализованные проверки](#реализованные-проверки)
 + [Запуск тестов из терминала](#запуск-тестов-из-терминала)
 + [Запуск тестов в Jenkins](#запуск-тестов-из-jenkins)
-+ [Уведомления в Telegram](#Уведомления-telegram)
-+ [Отчеты Allure Report](#Отчеты-allure-repor)
-+ [Интеграция с Allure TestOps](#Интеграция-allure-testOps)
-+ [Интеграция с Jira](#Интеграция-jira)
++ [Уведомления в Telegram](#уведомления-telegram)
++ [Отчеты Allure Report](#отчеты-allure-report)
++ [Интеграция с Allure TestOps](#интеграция-allure-testops)
++ [Интеграция с Jira](#интеграция-jira)
 
 ## <a name="технологии-и-инструменты">Технологии и инструменты:</a>
 <p  align="center">
@@ -59,13 +59,13 @@ gradle clean test
 ![Build_Parameters.png](media/screen/Build_Parameters.png)
 
 
-## <a name="Уведомления-telegram">Уведомления в Telegram:</a>
+## <a name="уведомления-telegram">Уведомления в Telegram:</a>
 
 С помощью настроенного бота после завершения прогона в Jenkins поступают уведомления в Telegram:
 
 ![TelegramBotAPI.png](media/screen/TelegramBotAPI.png)
 
-## <a name="Отчеты-Allure-Repor">Отчеты [Allure Report](https://jenkins.autotests.cloud/job/sveta_qa_guru_REST-API/allure/):</a>
+## <a name="отчеты-allure-report">Отчеты [Allure Report](https://jenkins.autotests.cloud/job/sveta_qa_guru_REST-API/allure/):</a>
 
 <b>Результаты автотестов отражается в Allure Report: </b>  
 
@@ -83,11 +83,11 @@ gradle clean test
 
 ![Allure_Report_suites.png](media/screen/Allure_Report_suites.png) 
 
-## <a name="Интеграция-Allure-TestOps">Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3800/dashboards):</a>
+## <a name="интеграция-allure-testops">Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3800/dashboards):</a>
 > Ссылка доступна только авторизованным пользователям.
 
 ![Allure_TestOps.png](media/screen/Allure_TestOps.png) 
 
-## <a name="Интеграция-Jira">Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-961):</a>
+## <a name="интеграция-jira">Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-961):</a>
 
 ![Jira.png](media/screen/Jira.png) 
