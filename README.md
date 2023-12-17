@@ -4,7 +4,7 @@
 ## Содержание:
 + [Технологии и инструменты](#Технологии-и-инструменты)
 + [Реализованные проверки](#Реализованные-проверки)
-+ [Запуск тестов из терминала](#Запуск-тестов-терминала)
++ [Запуск тестов из терминала](#Запуск-терминала)
 + [Запуск тестов в Jenkins](#Запуск-тестов-jenkins)
 + [Уведомления в Telegram](#Уведомления-telegram)
 + [Отчеты Allure Report](#Отчеты-allure-repor)
@@ -48,7 +48,7 @@
 gradle clean test  
 ```
 
-## <a name="Запуск-тестов-Jenkins">Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/sveta_qa_guru_REST-API/):</a>
+## <a name="Запуск-тестов-jenkins">Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/sveta_qa_guru_REST-API/):</a>
 
 Для запуска необходимо нажать "Build with Parameters":
 
@@ -59,7 +59,7 @@ gradle clean test
 ![Build_Parameters.png](media/screen/Build_Parameters.png)
 
 
-## <a name="Уведомления-Telegram">Уведомления в Telegram:</a>
+## <a name="Уведомления-telegram">Уведомления в Telegram:</a>
 
 С помощью настроенного бота после завершения прогона в Jenkins поступают уведомления в Telegram:
 
