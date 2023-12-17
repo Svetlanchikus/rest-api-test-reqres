@@ -42,7 +42,7 @@
 - Получение списка пользователей
 - Удаление пользователя
 
-## <a name="Запуск-тестов-терминала">Запуск тестов из терминала: </a>
+## <a name="Запуск-тестов-терминала">Запуск тестов из терминала:</a>
 
 ```
 gradle clean test  
@@ -65,7 +65,7 @@ gradle clean test
 
 ![TelegramBotAPI.png](media/screen/TelegramBotAPI.png)
 
-## <a name=">Отчеты-Allure-Report">Отчеты [Allure Report](https://jenkins.autotests.cloud/job/sveta_qa_guru_REST-API/11/allure/):</a>
+## <a name="Отчеты-Allure-Repor">Отчеты [Allure Report](https://jenkins.autotests.cloud/job/sveta_qa_guru_REST-API/allure/):</a>
 
 <b>Результаты автотестов отражается в Allure Report: </b>  
 
@@ -83,11 +83,11 @@ gradle clean test
 
 ![Allure_Report_suites.png](media/screen/Allure_Report_suites.png) 
 
-## <a name=">Интеграция-Allure-TestOps">Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3800/dashboards):</a>
+## <a name="Интеграция-Allure-TestOps">Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3800/dashboards):</a>
 > Ссылка доступна только авторизованным пользователям.
 
 ![Allure_TestOps.png](media/screen/Allure_TestOps.png) 
 
-## <a name=">Интеграция-Jira">Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-961):</a>
+## <a name="Интеграция-Jira">Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-961):</a>
 
 ![Jira.png](media/screen/Jira.png) 
